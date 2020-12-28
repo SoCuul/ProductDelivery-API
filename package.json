@@ -1,6 +1,6 @@
 {
   "name": "aviasbl",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple npm package to communicate with the AviaSBL API.",
   "main": "index.js",
   "scripts": {
