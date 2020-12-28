@@ -9,7 +9,7 @@
 - [Support](#support)
 
 ## About
-AviaSBL is a simple NPM package which allows you to easily interact with the AviaSBL api.
+AviaSBL is a simple npm package which allows you to easily interact with the AviaSBL api.
 
 ## Installation
 Use the package manager [npm](https://www.npmjs.com/) to install aviasbl:
