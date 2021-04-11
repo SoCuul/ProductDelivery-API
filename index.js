@@ -4,10 +4,9 @@
 const axios = require('axios');
 
 module.exports = async (userID) => {
-  let apiURL = 'https://api.aviasbl.socuul.dev/'
-  const reqURL = apiURL + userID
+  const apiURL = 'https://api.aviasbl.socuul.dev/'
 
-if(!userID) return 'Error: No id was provided';
+  if(!userID) return 'Error: No id was provided';
 
   try {
     const response = await axios.get(apiURL + userID);
