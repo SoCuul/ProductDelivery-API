@@ -26,8 +26,13 @@ const pdAPI = require('productdelivery-api');
 const client = new pdAPI('APIUrl', 'Default Token (Optional)');
 
 (async () => {
-    let request = await client.checkWhitelist('GuildID', 'RobloxID', 'Product Name');
-    console.log(request); // Returns false
+    try {
+        let request = await client.checkWhitelist('GuildID', 'RobloxID', 'Product Name');
+        console.log(request); // Returns false
+    }
+    catch (error) {
+        console.log(error);
+    }
 })();
 ```
 
