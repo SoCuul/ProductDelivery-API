@@ -290,6 +290,92 @@ class Client {
             }
         }
     }
+
+    async getUserInformation(robloxid) {
+        // Check variables
+        if(!robloxid) throw new Error('No roblox id was provided');
+
+        // Check variable types
+        if(typeof robloxid !== "string") throw new TypeError("The provided roblox ID must be a string");
+
+        try {
+            const request = await instance.get(this.apiURL + '/information/user', {
+                params: {
+                    robloxid: robloxid
+                }
+            })
+            
+            // Return response
+            return request.data
+        } catch (error) {
+            //Check if the response exists
+            if(error.response && error.response.status){
+                //Check if error code is valid
+                if(error.response.status == '400' || error.response.status == '404'){
+                    //Return response error
+                    return error.response.data
+                }
+                //Server error
+                else{
+                    //Return server error
+                    return {
+                        "error": "Server Error"
+                    }
+                }
+            }
+            //Unknown error
+            else{
+                //Return unknown error
+                return {
+                    "error": "Unknown Error",
+                    "nodeError": error
+                }
+            }
+        }
+    }
+
+    async getGuildInformation(guildid) {
+        // Check variables
+        if(!guildid) throw new Error('No guild id was provided');
+
+        // Check variable types
+        if(typeof guildid !== "string") throw new TypeError("The provided guild ID must be a string");
+
+        try {
+            const request = await instance.get(this.apiURL + '/information/guild', {
+                params: {
+                    guildid: guildid
+                }
+            })
+            
+            // Return response
+            return request.data
+        } catch (error) {
+            //Check if the response exists
+            if(error.response && error.response.status){
+                //Check if error code is valid
+                if(error.response.status == '400' || error.response.status == '404'){
+                    //Return response error
+                    return error.response.data
+                }
+                //Server error
+                else{
+                    //Return server error
+                    return {
+                        "error": "Server Error"
+                    }
+                }
+            }
+            //Unknown error
+            else{
+                //Return unknown error
+                return {
+                    "error": "Unknown Error",
+                    "nodeError": error
+                }
+            }
+        }
+    }
 }
 
 module.exports = Client
