@@ -1,6 +1,6 @@
 # ProductDelivery API
  
-![Version](https://img.shields.io/npm/v/productdelivery-api) ![Downloads](https://img.shields.io/npm/dw/productdelivery-api) ![Discord](https://img.shields.io/discord/AY7WHt4Nrw?logo=discord)
+![Version](https://img.shields.io/npm/v/productdelivery-api?logo=npm) ![Downloads](https://img.shields.io/npm/dw/productdelivery-api?logo=npm) ![Discord](https://img.shields.io/discord/803063436174032987?logo=discord)
 
 ## Table of contents
 - [About](#about)
@@ -132,4 +132,4 @@ const client = new pdAPI('APIUrl', 'Default Token (Optional)');
 ```
 
 ## Support
-If you need any help with this package, you can join our [discord server](https://discord.com/invite/AY7WHt4Nrw).
+If you need any help with this package, you can join our [discord server](https://discord.com/invite/cGW5vdNV3t).
