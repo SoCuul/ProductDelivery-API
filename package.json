@@ -1,26 +1,26 @@
 {
-  "name": "aviasbl",
-  "version": "1.1.2",
-  "description": "A simple npm package to communicate with the AviaSBL API.",
+  "name": "productdelivery-api",
+  "version": "1.0.0",
+  "description": "The official package to communicate with the ProductDelivery API.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SoCuul/AviaSBL.git"
+    "url": "git+https://github.com/SoCuul/productdelivery-api.git"
   },
   "keywords": [
-    "AviaSBL",
+    "ProductDelivery",
     "API"
   ],
   "author": "SoCuul",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SoCuul/AviaSBL/issues"
+    "url": "https://github.com/SoCuul/productdelivery-api/issues"
   },
-  "homepage": "https://github.com/SoCuul/AviaSBL#readme",
+  "homepage": "https://github.com/SoCuul/productdelivery-api#readme",
   "dependencies": {
-    "axios": "^0.21.0"
+    "axios": "^0.21.1"
   }
 }

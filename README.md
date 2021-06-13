@@ -1,33 +1,129 @@
-# AviaSBL
+# ProductDelivery API
  
-![Version](https://img.shields.io/npm/v/aviasbl) ![Downloads](https://img.shields.io/npm/dw/aviasbl) ![Discord](https://img.shields.io/discord/785716040100479027?logo=discord)
+![Version](https://img.shields.io/npm/v/productdelivery-api) ![Downloads](https://img.shields.io/npm/dw/productdelivery-api) ![Discord](https://img.shields.io/discord/785716040100479027?logo=discord)
 
 ## Table of contents
 - [About](#about)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Functions](#functions)
 - [Support](#support)
 
 ## About
-AviaSBL is a simple npm package which allows you to easily interact with the AviaSBL API.
+ProductDelivery-API is a simple wrapper for the [ProductDelivery](https://github.com/socuul/productdelivrey) API.
 
 ## Installation
-Use the package manager [npm](https://www.npmjs.com/) to install aviasbl:
+Use the package manager [npm](https://www.npmjs.com/) to install productdelivery-api:
 
 ```bash
-npm install aviasbl
+npm install productdelivery-api
 ```
 
 ## Usage
-This is a very simple example of how you can use this package. You can replace the id (490559747473539099) with any valid discord user ID.
+To use this package, you first need to create a client.
 ```js
-const aviaSBL = require('aviasbl');
+const pdAPI = require('productdelivery-api');
+const client = new pdAPI('APIUrl', 'Default Token (Optional)');
 
-//Fetch a user's info
-aviaSBL('490559747473539099').then((response) => {
-    console.log(response)
-    //Response: { status: 'ok', hasPremium: 'true', isBanned: 'false' }
-})
+(async () => {
+    let request = await client.checkWhitelist('GuildID', 'RobloxID', 'Product Name');
+    console.log(request); // Returns false
+})();
+```
+
+## Functions
+
+### Get Default Values
+#### Name: getDefaultValues
+#### Params: 
+* value: `apiURL`, `token`
+#### Example:
+```js
+(async () => {
+    try {
+        let request = client.getDefaultValues(value);
+        console.log(request);
+    }
+    catch (error) {
+        console.log(error);
+    }
+})();
+```
+
+### Check Whitelist
+#### Name: checkWhitelist
+#### Params: 
+* guildid
+* robloxid
+* productname
+#### Example:
+```js
+(async () => {
+    try {
+        let request = await client.checkWhitelist('GuildID', 'RobloxID', 'Product Name');
+        console.log(request);
+    }
+    catch (error) {
+        console.log(error);
+    }
+})();
+```
+
+### Get Guild Products
+#### Name: getGuildProducts
+#### Params: 
+* guildid
+* overwriteToken: (optional)
+#### Example:
+```js
+(async () => {
+    try {
+        let request = await client.getGuildProducts('GuildID', 'Overwrite Token');
+        console.log(request);
+    }
+    catch (error) {
+        console.log(error);
+    }
+})();
+```
+
+### Get User Products
+#### Name: getUserProducts
+#### Params: 
+* guildid
+* robloxid
+* overwriteToken: (optional)
+#### Example:
+```js
+(async () => {
+    try {
+        let request = await client.getUserProducts('GuildID', 'RobloxID', 'Overwrite Token');
+        console.log(request);
+    }
+    catch (error) {
+        console.log(error);
+    }
+})();
+```
+
+### Create Purchase
+#### Name: createPurchase
+#### Params: 
+* guildid
+* robloxid
+* productname
+* overwriteToken: (optional)
+#### Example:
+```js
+(async () => {
+    try {
+        let request = await client.createPurchase('GuildID', 'RobloxID', 'Product Name', 'Overwrite Token');
+        console.log(request);
+    }
+    catch (error) {
+        console.log(error);
+    }
+})();
 ```
 
 ## Support
