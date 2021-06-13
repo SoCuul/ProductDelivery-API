@@ -10,7 +10,7 @@
 - [Support](#support)
 
 ## About
-ProductDelivery-API is a simple wrapper for the [ProductDelivery](https://github.com/socuul/productdelivrey) API.
+ProductDelivery-API is a simple wrapper for the [ProductDelivery](https://github.com/socuul/productdelivery) API.
 
 ## Installation
 Use the package manager [npm](https://www.npmjs.com/) to install productdelivery-api:
