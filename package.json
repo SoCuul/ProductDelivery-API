@@ -1,6 +1,6 @@
 {
   "name": "productdelivery-api",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "The official package to communicate with the ProductDelivery API.",
   "main": "index.js",
   "scripts": {

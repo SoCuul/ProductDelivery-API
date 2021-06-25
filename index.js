@@ -131,7 +131,6 @@ class Client {
         //Check for variable types
         if(typeof token !== "string") throw new TypeError('The provided token must be a string')
         if(typeof guildid !== "string") throw new TypeError('The provided guild ID must be a string')
-        if(typeof robloxid !== "string") throw new TypeError('The provided Roblox ID must be a string')
 
         //Make request
         try{
